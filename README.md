@@ -1,8 +1,9 @@
-Down with Drones
+# Down with Drones
+## A top down puzzle game.
 
-A top down puzzle game.
-
-To get started, you'll need impactjs. Add the impact library and editor folders to /lib
-
-Then run:
-  python server.py
+To get started
+- Get http://impactjs.com/ 
+- Add the impact library and weltmeister editor folders to /lib
+- run: python server.py
+- game is running at http://localhost:8080/
+- editor is running at http://localhost:8080/editor
