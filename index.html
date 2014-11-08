@@ -20,12 +20,21 @@
 			bottom: 0;
 			margin: auto;
 		}
+
+		.scoring {
+			float: right;
+			padding-right: 5%;
+		}
 	</style>
 
 	<script type="text/javascript" src="lib/impact/impact.js"></script>
 	<script type="text/javascript" src="lib/game/main.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
+	<div class="scoring">
+		Score: <span id="score">0</span>
+	</div>
 	<canvas id="canvas"></canvas>
 </body>
 </html>
