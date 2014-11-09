@@ -21,14 +21,10 @@
       margin: auto;
     }
     .hud {
-      position: absolute;
-      left: 0;
-      right: 15px;
-      top: 15px;
-      height: 25px;
-      margin: auto;
-      z-index: 5;
-      width: 960px;
+      text-align: right;
+    }
+    .hud > div{
+      padding: 15px;
     }
 
     .hud .timer-display {
@@ -39,7 +35,7 @@
     .hud .scoring {
       float: right;
     }
-    .intro{
+    .positioned{
       position: absolute;
       left: 0;
       right: 0;
@@ -50,11 +46,13 @@
       height: 496px;
       z-index: 2;
       text-align: center;
-      opacity: 0;
-      transition: all .5s;
       pointer-events: none;
     }
-    .intro.active{
+    .positioned.animated{
+      opacity: 0;
+      transition: all .5s;
+    }
+    .positioned.active{
       opacity: 1;
       pointer-events: auto;
     }
@@ -65,19 +63,30 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
-  <div class="hud">
-    <div class="scoring">
-      Score: <span id="score">0</span>
+  <div class="positioned hud animated">
+    <div>
+      <div class="scoring">
+        Score: <span class="score">0</span>
+      </div>
+      <div class="timer-display">Timer: <span class="timer"></span></div>
     </div>
-    <div class="timer-display">Timer: <span class="timer"></span></div>
   </div>
   <canvas id="canvas"></canvas>
-  <div class="intro">
+  <div class="intro positioned animated">
     HELLO!
     <br/>
 
     Click to get started.
   </div>
-  
+  <div class="level-end positioned animated">
+    LEVEL OVER.
+    <br/>
+    Click to go to next level.
+  </div>
+  <div class="game-end positioned animated">
+    Game Over
+    <br/>
+    Your Score: <span class="score">0</span>
+  </div>
 </body>
 </html>
