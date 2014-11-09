@@ -20,10 +20,24 @@
       bottom: 0;
       margin: auto;
     }
+    .hud {
+      position: absolute;
+      left: 0;
+      right: 15px;
+      top: 15px;
+      height: 25px;
+      margin: auto;
+      z-index: 5;
+      width: 960px;
+    }
 
-    .scoring {
+    .hud .timer-display {
       float: right;
-      padding-right: 5%;
+      margin-right: 20px;
+    }
+
+    .hud .scoring {
+      float: right;
     }
     .intro{
       position: absolute;
@@ -51,10 +65,12 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
-  <div class="scoring">
-    Score: <span id="score">0</span>
+  <div class="hud">
+    <div class="scoring">
+      Score: <span id="score">0</span>
+    </div>
+    <div class="timer-display">Timer: <span class="timer"></span></div>
   </div>
-  <div class="timer"></div>
   <canvas id="canvas"></canvas>
   <div class="intro">
     HELLO!
