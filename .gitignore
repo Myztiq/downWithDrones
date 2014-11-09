@@ -68,3 +68,4 @@ lib/impact
 lib/weltmeister
 
 .DS_Store
+game.min.js

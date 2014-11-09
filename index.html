@@ -21,14 +21,7 @@
       margin: auto;
     }
     .hud {
-      position: absolute;
-      left: 0;
-      right: 15px;
-      top: 15px;
-      height: 25px;
-      margin: auto;
-      z-index: 5;
-      width: 960px;
+      text-align: right;
     }
 
     .hud .timer-display {
@@ -39,22 +32,24 @@
     .hud .scoring {
       float: right;
     }
-    .intro{
+    .positioned{
       position: absolute;
-      left: 0;
+      left: 15px;
       right: 0;
-      top: 0;
+      top: 15px;
       bottom: 0;
       margin: auto;
-      width: 960px;
-      height: 496px;
+      width: 930px;
+      height: 476px;
       z-index: 2;
       text-align: center;
-      opacity: 0;
-      transition: all .5s;
       pointer-events: none;
     }
-    .intro.active{
+    .positioned.animated{
+      opacity: 0;
+      transition: all .5s;
+    }
+    .positioned.active{
       opacity: 1;
       pointer-events: auto;
     }
@@ -65,19 +60,44 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
-  <div class="hud">
+  <div class="positioned hud animated">
     <div class="scoring">
-      Score: <span id="score">0</span>
+      Score: <span class="score">0</span>
     </div>
     <div class="timer-display">Timer: <span class="timer"></span></div>
   </div>
   <canvas id="canvas"></canvas>
-  <div class="intro">
-    HELLO!
+  <div class="intro positioned animated">
+    <h1>Down with the Drones</h1>
     <br/>
-
+    Get your drones to their portal. Correct counts as points
+    for the number of seconds remaining, wrong counts negative.
+    <br/>
+    <h2>Go big or go home.</h2>
+    <br/>
+    <br/>
+    WASD to move
+    <br/>
+    K to swarm
+    <br/>
+    L to anti-swarm
+    <br/>
     Click to get started.
+    <br/>
+    <br/>
+    You can also use a PS3/4 Dualshock Controller.
+    <br/>
+    Either joystick to move, X to swarm, Square to anit-swarm
   </div>
-  
+  <div class="level-end positioned animated">
+    LEVEL OVER.
+    <br/>
+    Click to go to next level.
+  </div>
+  <div class="game-end positioned animated">
+    Game Over
+    <br/>
+    Your Score: <span class="score">0</span>
+  </div>
 </body>
 </html>
