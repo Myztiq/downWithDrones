@@ -26,7 +26,6 @@
       padding-right: 5%;
     }
     .intro{
-      display: none;
       position: absolute;
       left: 0;
       right: 0;
@@ -37,7 +36,13 @@
       height: 496px;
       z-index: 2;
       text-align: center;
-
+      opacity: 0;
+      transition: all .5s;
+      pointer-events: none;
+    }
+    .intro.active{
+      opacity: 1;
+      pointer-events: auto;
     }
   </style>
 
