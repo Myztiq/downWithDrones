@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Impact Game</title>
+  <style type="text/css">
+    html,body {
+      background-color: #333;
+      color: #fff;
+      font-family: helvetica, arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-size: 12pt;
+    }
+    
+    #canvas {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .hud {
+      text-align: right;
+    }
+    .hud > div{
+      padding: 15px;
+    }
+
+    .hud .timer-display {
+      float: right;
+      margin-right: 20px;
+    }
+
+    .hud .scoring {
+      float: right;
+    }
+    .positioned{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 960px;
+      height: 496px;
+      z-index: 2;
+      text-align: center;
+      pointer-events: none;
+    }
+    .positioned.animated{
+      opacity: 0;
+      transition: all .5s;
+    }
+    .positioned.active{
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+
+  <script type="text/javascript" src="/game.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+  <div class="positioned hud animated">
+    <div>
+      <div class="scoring">
+        Score: <span class="score">0</span>
+      </div>
+      <div class="timer-display">Timer: <span class="timer"></span></div>
+    </div>
+  </div>
+  <canvas id="canvas"></canvas>
+  <div class="intro positioned animated">
+    HELLO!
+    <br/>
+
+    Click to get started.
+  </div>
+  <div class="level-end positioned animated">
+    LEVEL OVER.
+    <br/>
+    Click to go to next level.
+  </div>
+  <div class="game-end positioned animated">
+    Game Over
+    <br/>
+    Your Score: <span class="score">0</span>
+  </div>
+</body>
+</html>
