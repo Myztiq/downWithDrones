@@ -23,9 +23,6 @@
     .hud {
       text-align: right;
     }
-    .hud > div{
-      padding: 15px;
-    }
 
     .hud .timer-display {
       float: right;
@@ -37,13 +34,13 @@
     }
     .positioned{
       position: absolute;
-      left: 0;
+      left: 15px;
       right: 0;
-      top: 0;
+      top: 15px;
       bottom: 0;
       margin: auto;
-      width: 960px;
-      height: 496px;
+      width: 930px;
+      height: 476px;
       z-index: 2;
       text-align: center;
       pointer-events: none;
@@ -63,12 +60,10 @@
 </head>
 <body>
 <div class="positioned hud animated">
-  <div>
-    <div class="scoring">
-      Score: <span class="score">0</span>
-    </div>
-    <div class="timer-display">Timer: <span class="timer"></span></div>
+  <div class="scoring">
+    Score: <span class="score">0</span>
   </div>
+  <div class="timer-display">Timer: <span class="timer"></span></div>
 </div>
 <canvas id="canvas"></canvas>
 <div class="intro positioned animated">
