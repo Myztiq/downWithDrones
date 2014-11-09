@@ -11,7 +11,7 @@
       padding: 0;
       font-size: 12pt;
     }
-    
+
     #canvas {
       position: absolute;
       left: 0;
@@ -62,30 +62,41 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
-  <div class="positioned hud animated">
-    <div>
-      <div class="scoring">
-        Score: <span class="score">0</span>
-      </div>
-      <div class="timer-display">Timer: <span class="timer"></span></div>
+<div class="positioned hud animated">
+  <div>
+    <div class="scoring">
+      Score: <span class="score">0</span>
     </div>
+    <div class="timer-display">Timer: <span class="timer"></span></div>
   </div>
-  <canvas id="canvas"></canvas>
-  <div class="intro positioned animated">
-    HELLO!
-    <br/>
-
-    Click to get started.
-  </div>
-  <div class="level-end positioned animated">
-    LEVEL OVER.
-    <br/>
-    Click to go to next level.
-  </div>
-  <div class="game-end positioned animated">
-    Game Over
-    <br/>
-    Your Score: <span class="score">0</span>
-  </div>
+</div>
+<canvas id="canvas"></canvas>
+<div class="intro positioned animated">
+  Down with the Drones
+  <br/>
+  <br/>
+  WASD to move
+  <br/>
+  K to swarm
+  <br/>
+  L to anti-swarm
+  <br/>
+  Click to get started.
+  <br/>
+  <br/>
+  You can also use a PS3/4 Dualshock Controller.
+  <br/>
+  Either joystick to move, X to swarm, Square to anit-swarm
+</div>
+<div class="level-end positioned animated">
+  LEVEL OVER.
+  <br/>
+  Click to go to next level.
+</div>
+<div class="game-end positioned animated">
+  Game Over
+  <br/>
+  Your Score: <span class="score">0</span>
+</div>
 </body>
 </html>
